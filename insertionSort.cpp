@@ -2,40 +2,40 @@
 
 void swap(int* arr, int i, int j)
 {
-	int temp = arr[i];
-	arr[i] = arr[j];
-	arr[j] = temp;
+    int temp = arr[i];
+    arr[i] = arr[j];
+    arr[j] = temp;
 }
 
 void insertionSort(int* arr, int n)
 {
-	int i = 1;
-	while (i < n)
-	{
-		int j = i;
-		while ((j > 0) && (arr[j - 1] > arr[j]))
-		{
-			swap(arr, j - 1, j);
-			j--;
-		}
+    int i = 1;
+    while (i < n)
+    {
+        int j = i;
+        while ((j > 0) && (arr[j - 1] > arr[j]))
+        {
+            swap(arr, j - 1, j);
+            j--;
+        }
 
-		// print the current status of the array
-		if ((i + 1) != n)
-		{
-			std::cout << "The first " << i + 1 << " elements are sorted.\n";
-		}
-		else
-		{
-			std::cout << "The whole array is sorted.\n";
-		}
-		for (int k = 0; k < n; k++)
-		{
-			std::cout << arr[k] << " ";
-		}
-		std::cout << "\n";	
+        // print the current status of the array
+        if ((i + 1) != n)
+        {
+            std::cout << "The first " << i + 1 << " elements are sorted.\n";
+        }
+        else
+        {
+            std::cout << "The whole array is sorted.\n";
+        }
+        for (int k = 0; k < n; k++)
+        {
+            std::cout << arr[k] << " ";
+        }
+        std::cout << "\n";  
 
-		i++;
-	}
+        i++;
+    }
 }
 
 int main(int argc, char** argv)
